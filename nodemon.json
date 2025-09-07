@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ext": "ts,json",
+  "ignore": ["node_modules", "dist"],
+  "exec": "node --env-file=.env -r ts-node/register ./src/server.ts"
+}

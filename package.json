@@ -1,0 +1,30 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "npm run build && node ."
+  },
+  "author": "Manoj Adhinarayanan",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node-forge": "^1.3.14",
+    "bcrypt": "^6.0.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.19.0",
+    "node-forge": "^1.3.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/module-alias": "^2.0.4",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
