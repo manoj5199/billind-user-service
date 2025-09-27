@@ -1,8 +1,8 @@
 import { Db, MongoClient } from "mongodb";
 
-const mongoUri = process.env.DB_URI || "mongodb://localhost:27017/";
+const mongoUri = process.env.DB_URI;
 const databaseName = process.env.DB_NAME || "user-register";
-let client = new MongoClient(mongoUri);
+let client = new MongoClient(mongoUri!);
 let db: Db;
 
 client.on("connection", () => {
