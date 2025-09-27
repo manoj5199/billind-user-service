@@ -29,7 +29,7 @@ export const register = async (req: Request, res: Response) => {
     const errorResponse = {
       success: false,
       message: "Server error.",
-      errors: [{ message: "An unexpected error occurred." }],
+      errors: [{ message: "An unexpected error occurred." + " " + error }],
     };
     res.status(500).json(errorResponse);
   }
