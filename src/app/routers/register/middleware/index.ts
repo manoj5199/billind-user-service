@@ -107,7 +107,7 @@ export const checkEmailIsAvailable = async (
     const errorResponse = {
       success: false,
       message: "Server error.",
-      errors: [{ message: "An unexpected error occurred." }],
+      errors: [{ message: "An unexpected error occurred." + " " + error }],
     };
     res.status(500).json(errorResponse);
   }
@@ -139,7 +139,7 @@ export const validatePasswordPolicy = async (
     const errorResponse = {
       success: false,
       message: "Server error.",
-      errors: [{ message: "An unexpected error occurred." }],
+      errors: [{ message: "An unexpected error occurred." + " " + error }],
     };
     res.status(500).json(errorResponse);
   }
