@@ -1,6 +1,5 @@
 import { connect } from "./app/database";
 import { app } from "./app";
-import { generateKeyPair } from "./app/utilities/decrypt";
 
 const port = process.env.PORT || 4000;
 
@@ -10,6 +9,9 @@ app.listen(port, async (error) => {
     return;
   }
 
-  await connect();
+  await connect().finally(() => {
+    console.log("Database connected");
+  });
+
   console.log(`Service is listening on port ${port}`);
 });
