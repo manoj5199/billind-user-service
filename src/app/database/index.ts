@@ -3,8 +3,7 @@ import { Db, MongoClient } from "mongodb";
 const mongoUri = process.env.DB_URI;
 const databaseName = process.env.DB_NAME || "user-register";
 let client = new MongoClient(mongoUri!);
-let db: Db;
-
+let db: Db = client.db(databaseName);
 client.on("connection", () => {
   console.log(`Database connected successfully`);
 });
