@@ -9,6 +9,6 @@
       }
     }
   ],
-  "routes": [{ "src": "/dist/(.*)", "dest": "dist/index.js" }],
+  "routes": [{ "src": "dist/(.*)", "dest": "dist/index.js" }],
   "buildCommand": "npm run build"
 }
